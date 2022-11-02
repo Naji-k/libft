@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_lstadd_back.c                                   :+:    :+:            */
+/*   ft_lstadd_front_bonus.c                            :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: nakanoun <nakanoun@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/11/01 23:53:37 by nakanoun      #+#    #+#                 */
-/*   Updated: 2022/11/02 01:09:16 by nakanoun      ########   odam.nl         */
+/*   Created: 2022/11/02 19:59:10 by nakanoun      #+#    #+#                 */
+/*   Updated: 2022/11/02 20:07:38 by nakanoun      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-
+	new->next = *lst;
+	*lst = new;
 }

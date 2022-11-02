@@ -6,7 +6,7 @@
 /*   By: nakanoun <nakanoun@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 21:15:47 by nakanoun      #+#    #+#                 */
-/*   Updated: 2022/10/17 23:16:45 by nakanoun      ########   odam.nl         */
+/*   Updated: 2022/11/02 20:23:31 by nakanoun      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ char	*ft_strchr(const char *str, int c)
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] == c)
+		if (str[i] == (char)c)
 			return ((char *)str + i);
 		i++;
 	}
-	return (0);
+	if (str[i] == (char)c)
+		return ((char *)str + i);
+	return (NULL);
 }

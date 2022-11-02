@@ -6,11 +6,11 @@
 /*   By: nakanoun <nakanoun@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/04 13:07:15 by nakanoun      #+#    #+#                 */
-/*   Updated: 2022/10/05 12:40:10 by nakanoun      ########   odam.nl         */
+/*   Updated: 2022/11/02 16:30:10 by nakanoun      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'B'));
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }

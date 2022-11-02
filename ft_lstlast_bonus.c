@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strrchr.c                                       :+:    :+:            */
+/*   ft_lstlast_bonus.c                                 :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: nakanoun <nakanoun@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/17 23:17:58 by nakanoun      #+#    #+#                 */
-/*   Updated: 2022/11/02 17:24:24 by nakanoun      ########   odam.nl         */
+/*   Created: 2022/11/01 23:49:57 by nakanoun      #+#    #+#                 */
+/*   Updated: 2022/11/02 19:46:52 by nakanoun      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int c)
+t_list	*ft_lstlast(t_list *lst)
 {
-	int		str_len;
-	char	*res;
-
-	res = "";
-	str_len = ft_strlen(str);
-	if (*str == '0')
-		return (res);
-	while (str_len >= 0)
+	if (!lst)
+		return (NULL);
+	while (lst->next != NULL)
 	{
-		if (str[str_len] == (char)c)
-			return ((char *)str + str_len);
-		str_len--;
+		lst = lst->next;
 	}
-	return (NULL);
+	return (lst);
 }
