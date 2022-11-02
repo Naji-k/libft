@@ -6,7 +6,7 @@
 #    By: nakanoun <nakanoun@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/05 12:20:24 by nakanoun      #+#    #+#                  #
-#    Updated: 2022/10/27 18:33:19 by nakanoun      ########   odam.nl          #
+#    Updated: 2022/11/02 00:37:04 by nakanoun      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,10 @@ SRC = ft_isalpha.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
 		ft_lstnew.c \
-		ft_lstadd_front.c
+		ft_lstadd_front.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstadd_back.c
 
 OBJS = ${SRC:.c=.o}
 
