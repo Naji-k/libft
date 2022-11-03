@@ -6,7 +6,7 @@
 /*   By: nakanoun <nakanoun@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/02 19:58:38 by nakanoun      #+#    #+#                 */
-/*   Updated: 2022/11/02 20:50:19 by nakanoun      ########   odam.nl         */
+/*   Updated: 2022/11/03 16:29:37 by nakanoun      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,25 +24,13 @@ t_list	*ft_lstnew(void *content)
 	return (new_node);
 }
 
-#include"stdio.h"
+/* #include"stdio.h"
 int	main(void)
 {
 	t_list *curr;
 
-	curr = ft_lstnew((void*)42);
+	curr = ft_lstnew("12");
 	
-	printf("%p",(*curr).content);
-	if (curr->content == (void *)42)
-	printf("\nok");
-	// curr = root;
-	// while (curr != NULL)
-	// {
-	// 	//do something
-	// 	printf("%d\n", curr->x);
-	// 	curr = curr->next;
-	// }
-	// for (Node *cur = root)
-	// printf("first elem:%d\n", root.x);
-	// printf("2nd elem:%d\n", root.next->x);
+	printf("%s",curr->content);
 	return (0);
-}
+} */

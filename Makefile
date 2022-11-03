@@ -6,7 +6,7 @@
 #    By: nakanoun <nakanoun@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/05 12:20:24 by nakanoun      #+#    #+#                  #
-#    Updated: 2022/11/03 02:11:05 by NajiKanounj   ########   odam.nl          #
+#    Updated: 2022/11/03 20:43:23 by nakanoun      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,7 +60,7 @@ BONUS_SRC = ft_lstnew_bonus.c \
 			ft_lstdelone_bonus.c \
 			ft_lstclear_bonus.c \
 			ft_lstiter_bonus.c \
-			# ft_lstmap_bonus.c\
+			ft_lstmap_bonus.c\
 
 REG_OBJS = ${SRC:.c=.o}
 OBJC_BONUS = ${BONUS_SRC:.c=.o}
@@ -78,12 +78,17 @@ all : ${OBJS}
 	
 all : ${NAME}
 
-${NAME}:	${OBJS}
+${NAME}:	${REG_OBJS}
 
-	${AR} -crs ${NAME} ${OBJS}
+	${AR} -crs ${NAME} ${REG_OBJS}
 
-bonus : 
-	$(MAKE) WITH_BONUS=1 all
+# bonus : 
+# 	$(MAKE) WITH_BONUS=1 all
+
+# uncomment bonus rule for francinette
+bonus: $(NAME) $(OBJC_BONUS)
+	$(AR) -crs $(NAME) $(OBJC_BONUS)
+	
 clean: 
 	rm -f ${REG_OBJS} ${OBJC_BONUS}
 
