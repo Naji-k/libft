@@ -6,7 +6,7 @@
 /*   By: nakanoun <nakanoun@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/02 19:53:46 by nakanoun      #+#    #+#                 */
-/*   Updated: 2022/11/02 20:51:01 by nakanoun      ########   odam.nl         */
+/*   Updated: 2022/11/03 00:13:45 by NajiKanounj   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 
 	if (*lst == NULL)
 	{
-		free(lst);
+		free(*lst);
 		return ;
 	}
 	while (*lst != NULL)
@@ -28,4 +28,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		del(curr->content);
 		free(curr);
 	}
+	free(*lst);
 }

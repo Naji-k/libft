@@ -6,7 +6,7 @@
 /*   By: nakanoun <nakanoun@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/25 20:03:07 by nakanoun      #+#    #+#                 */
-/*   Updated: 2022/10/26 17:58:03 by nakanoun      ########   odam.nl         */
+/*   Updated: 2022/11/03 00:06:03 by NajiKanounj   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,7 @@ char	*ft_itoa(int n)
 	int		str_len;
 	int		num;
 	char	*str;
-	int		i;
 
-	i = 0;
 	num = n;
 	str_len = cal_int(n);
 	if (num == -2147483648)

@@ -6,7 +6,7 @@
 #    By: nakanoun <nakanoun@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/05 12:20:24 by nakanoun      #+#    #+#                  #
-#    Updated: 2022/11/02 20:56:04 by nakanoun      ########   odam.nl          #
+#    Updated: 2022/11/03 02:11:05 by NajiKanounj   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,6 +60,7 @@ BONUS_SRC = ft_lstnew_bonus.c \
 			ft_lstdelone_bonus.c \
 			ft_lstclear_bonus.c \
 			ft_lstiter_bonus.c \
+			# ft_lstmap_bonus.c\
 
 REG_OBJS = ${SRC:.c=.o}
 OBJC_BONUS = ${BONUS_SRC:.c=.o}
