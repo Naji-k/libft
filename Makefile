@@ -6,7 +6,7 @@
 #    By: nakanoun <nakanoun@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/05 12:20:24 by nakanoun      #+#    #+#                  #
-#    Updated: 2022/11/03 20:43:23 by nakanoun      ########   odam.nl          #
+#    Updated: 2022/11/07 19:34:39 by nakanoun      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,12 +82,12 @@ ${NAME}:	${REG_OBJS}
 
 	${AR} -crs ${NAME} ${REG_OBJS}
 
-# bonus : 
-# 	$(MAKE) WITH_BONUS=1 all
+bonus : 
+	$(MAKE) WITH_BONUS=1 all
 
-# uncomment bonus rule for francinette
-bonus: $(NAME) $(OBJC_BONUS)
-	$(AR) -crs $(NAME) $(OBJC_BONUS)
+# for francinette
+# bonus: $(NAME) $(OBJC_BONUS)
+# 	$(AR) -crs $(NAME) $(OBJC_BONUS)
 	
 clean: 
 	rm -f ${REG_OBJS} ${OBJC_BONUS}

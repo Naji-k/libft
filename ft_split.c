@@ -6,7 +6,7 @@
 /*   By: nakanoun <nakanoun@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/24 18:14:50 by nakanoun      #+#    #+#                 */
-/*   Updated: 2022/10/26 22:18:24 by nakanoun      ########   odam.nl         */
+/*   Updated: 2022/11/07 19:28:56 by nakanoun      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,26 +83,3 @@ char	**ft_split(char const *s, char c)
 	split_str[j] = NULL;
 	return (split_str);
 }
-
-/* int	main(void)
-{
-	char const	*s;
-	char		**res;
-	int			i;
-
-	s = "split  ||this|for|me|||||!|";
-	res = ft_split("", ' ');
-	if (res == NULL)
-	{
-		printf(" null00");
-		return (0);
-	}
-	i = 0;
-	while (res[i])
-	{
-		printf("%s\n", res[i]);
-		free(res[i]);
-		i++;
-	}
-	free(res);
-} */

@@ -6,7 +6,7 @@
 /*   By: nakanoun <nakanoun@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/18 23:32:02 by nakanoun      #+#    #+#                 */
-/*   Updated: 2022/10/26 22:16:43 by nakanoun      ########   odam.nl         */
+/*   Updated: 2022/11/07 19:28:32 by nakanoun      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,27 +32,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-/* #include <string.h>
-
-int	main(void)
-{
-	char str1[15];
-	char str2[15];
-	int ret;
-	int me;
-
-	memcpy(str1, "asd", 8);
-	memcpy(str2, "asdasd", 8);
-
-	ret = memcmp(str1, str2, 6);
-	me = ft_memcmp(str1, str2, 6);
-	if (ret != me)
-	{
-		printf("ret=%d\n", ret);
-		printf("me=%d\n", me);
-	}
-	else
-		printf("OK");
-	return (0);
-} */

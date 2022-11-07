@@ -6,7 +6,7 @@
 /*   By: nakanoun <nakanoun@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/20 18:34:01 by nakanoun      #+#    #+#                 */
-/*   Updated: 2022/10/20 22:58:45 by nakanoun      ########   odam.nl         */
+/*   Updated: 2022/11/07 17:39:08 by nakanoun      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		sub_str = ft_strdup("");
 		return (sub_str);
 	}
-	if (len > ft_strlen(s))
+	if (start + len > ft_strlen(s))
 		str_len = ft_strlen(s) - start;
 	else
 		str_len = len;

@@ -6,7 +6,7 @@
 /*   By: nakanoun <nakanoun@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/26 18:23:14 by nakanoun      #+#    #+#                 */
-/*   Updated: 2022/10/26 19:22:19 by nakanoun      ########   odam.nl         */
+/*   Updated: 2022/11/07 19:29:14 by nakanoun      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[s_len] = '\0';
 	return (str);
 }
-
-/* #include <stdio.h>
-
-char	toUpper(unsigned int i, char c)
-{
-	return (-32 + c);
-}
-int	main(void)
-{
-	printf("%s", ft_strmapi("hello", toUpper));
-} */
