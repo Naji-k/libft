@@ -95,9 +95,9 @@ bonus:
 # 	$(AR) -crs $(NAME) $(OBJC_BONUS)
 	
 clean: 
-	rm -f ${REG_OBJS} ${OBJC_BONUS}
+	rm -rf $(OBJ_DIR)
 
 fclean:		clean
-	rm -f ${NAME} a.out libft.h.gch
+	rm -f ${NAME} 
 	
 re: fclean all
