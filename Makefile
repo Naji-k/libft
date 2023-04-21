@@ -14,10 +14,14 @@ NAME = libft.a
 
 AR = ar
 CC = cc
+INCLUDE = -I include
 
 FLAG = -Wall -Wextra -Werror
 
-SRC = ft_isalpha.c \
+# Directories
+OBJ_DIR = obj
+
+FILES = ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c\
 		ft_isascii.c \
@@ -52,7 +56,7 @@ SRC = ft_isalpha.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c 
 
-BONUS_SRC = ft_lstnew_bonus.c \
+BONUS_FILES = ft_lstnew_bonus.c \
 			ft_lstadd_front_bonus.c \
 			ft_lstsize_bonus.c \
 			ft_lstlast_bonus.c \
@@ -62,8 +66,11 @@ BONUS_SRC = ft_lstnew_bonus.c \
 			ft_lstiter_bonus.c \
 			ft_lstmap_bonus.c\
 
-REG_OBJS = ${SRC:.c=.o}
-OBJC_BONUS = ${BONUS_SRC:.c=.o}
+SRC = $(addprefix src/, $(FILES))
+BONUS = $(addprefix src/, $(BONUS_FILES))
+
+REG_OBJS = $(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))
+OBJC_BONUS = $(addprefix $(OBJ_DIR)/, $(BONUS:.c=.o))
 
 ifdef WITH_BONUS
 OBJS = ${REG_OBJS} ${OBJC_BONUS}
@@ -71,19 +78,17 @@ else
 OBJS = ${REG_OBJS}
 endif
 
-all : ${OBJS}
-	
-%.o : %.c
-	$(CC) -c $(FLAG) $< -o $@
-	
-all : ${NAME}
+all: ${NAME}
 
-${NAME}:	${REG_OBJS}
+${NAME}:	${OBJS}
+	${AR} -crs ${NAME} ${OBJS}
 
-	${AR} -crs ${NAME} ${REG_OBJS}
+$(OBJ_DIR)/%.o: %.c
+		@mkdir -p $(@D)
+		$(CC) -c $(FLAG) $(INCLUDE) $< -o $@
 
-bonus : 
-	$(MAKE) WITH_BONUS=1 all
+bonus:
+	@$(MAKE) WITH_BONUS=1 all
 
 # for francinette
 # bonus: $(NAME) $(OBJC_BONUS)
