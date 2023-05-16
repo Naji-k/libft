@@ -90,6 +90,7 @@ $(OBJ_DIR)/%.o: %.c
 bonus:
 	@$(MAKE) WITH_BONUS=1 all
 
+#hey test
 # for francinette
 # bonus: $(NAME) $(OBJC_BONUS)
 # 	$(AR) -crs $(NAME) $(OBJC_BONUS)
